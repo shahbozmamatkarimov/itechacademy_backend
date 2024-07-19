@@ -2,6 +2,7 @@ import express from "express";
 
 // Import routes
 import userRouter from "./routes/user.routes.js"
+import productRouter from "./routes/product.routes.js"
 import errorMiddleware from "./middleware/errorHandler.js";
 
 const app = express();
@@ -25,5 +26,6 @@ app.use(express.json());
 
 // routes
 app.use("/api/user", userRouter);
+app.use("/api/products", productRouter);
 
 export default app;
